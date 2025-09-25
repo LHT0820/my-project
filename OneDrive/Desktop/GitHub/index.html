@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>clothesTina.store — 媽媽的安心選擇</title>
+  <meta name="description" content="clothesTina.store：為忙碌媽媽設計的舒適時尚服飾。簡單、好搭、好洗，陪伴每日大小事。" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <style>
+    :root{--accent:#e76f51;--muted:#6b7280;--bg:#fbfbfd;--card:#ffffff}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Noto Sans TC',Helvetica,Arial; margin:0; background:var(--bg); color:#111}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,#ffb4a2,#e76f51);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:18px;color:var(--muted);text-decoration:none}
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:36px 0}
+    .hero-inner{background:linear-gradient(180deg, rgba(231,111,81,0.06), transparent);padding:20px;border-radius:12px}
+    h1{margin:0 0 12px;font-size:28px}
+    p.lead{margin:0 0 18px;color:var(--muted)}
+    .cta{display:inline-block;background:var(--accent);color:white;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600}
+    .features{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .feature{background:var(--card);padding:14px;border-radius:10px;flex:1;min-width:180px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:28px 0}
+    .card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 20px rgba(16,24,40,0.06)}
+    .img{height:220px;border-radius:8px;background-size:cover;background-position:center;margin-bottom:12px}
+    .price{font-weight:700;color:#0f172a}
+    footer{border-top:1px solid #eef2f7;padding:20px 0;margin-top:28px;color:var(--muted);font-size:14px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (min-width:800px){
+      .hero{grid-template-columns:1fr 420px}
+      h1{font-size:36px}
+    }
+    /* simple modal cart */
+    .modal{position:fixed;right:20px;bottom:20px;background:white;border-radius:12px;padding:14px;box-shadow:0 10px 30px rgba(2,6,23,0.2);display:none;min-width:260px}
+    .modal.show{display:block}
+    .btn-sm{display:inline-block;padding:8px 12px;border-radius:8px;background:#111;color:white;text-decoration:none}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:#fff6f5;border:1px solid #ffdcd1;color:#e65b3f;font-weight:600}
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="brand">
+      <div class="logo">CT</div>
+      <div>
+        <div style="font-weight:700">clothesTina.store</div>
+        <div style="font-size:13px;color:var(--muted)">媽媽的日常好衣選</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#products">商品</a>
+      <a href="#about">關於</a>
+      <a href="#contact">聯絡</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>舒適、耐洗、好搭 — 為媽媽設計的衣服</h1>
+        <p class="lead">我們理解媽媽的生活節奏：需要能快速打理、兼顧美感與機能的服飾。</p>
+        <a class="cta" href="#products">立刻逛逛熱銷款</a>
+
+        <div class="features">
+          <div class="feature">
+            <strong>舒適面料</strong>
+            <div style="color:var(--muted);margin-top:8px">棉混彈性布，親膚透氣，陪你一整天。</div>
+          </div>
+          <div class="feature">
+            <strong>易洗快乾</strong>
+            <div style="color:var(--muted);margin-top:8px">不易皺、機洗耐用，省時省力。</div>
+          </div>
+          <div class="feature">
+            <strong>好搭配</strong>
+            <div style="color:var(--muted);margin-top:8px">基礎色系與簡約剪裁，隨性搭配多場合。</div>
+          </div>
+        </div>
+      </div>
+
+      <aside style="padding:6px">
+        <div style="background:linear-gradient(180deg,#fff,#fff);padding:18px;border-radius:12px;border:1px solid #f3f4f6">
+          <div style="font-weight:700;margin-bottom:8px">新品推薦</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;gap:10px;align-items:center">
+              <div style="width:56px;height:56px;border-radius:8px;background-image:url('https://source.unsplash.com/collection/190727/200x200');background-size:cover"></div>
+              <div>
+                <div style="font-weight:600">柔棉親子上衣</div>
+                <div style="color:var(--muted);font-size:13px">NT$680</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center">
+              <div style="width:56px;height:56px;border-radius:8px;background-image:url('https://source.unsplash.com/collection/190727/201x200');background-size:cover"></div>
+              <div>
+                <div style="font-weight:600">百搭長版外套</div>
+                <div style="color:var(--muted);font-size:13px">NT$1280</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+<section id="products">
+  <h2 style="margin-top:6px">熱銷商品</h2>
+  <div class="products">
+    <!-- 黑色寬鬆休閒褲 -->
+    <div class="card">
+       <div class="img" style="background-image:url('images/A.jpg');"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-weight:700">寬鬆休閒褲（黑色）</div>
+          <div style="color:var(--muted);font-size:13px">尺寸：M/L/XL</div>
+        </div>
+        <div class="price">NT$288</div>
+      </div>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <a class="btn-sm" href="#">加入購物車</a>
+        <a class="tag">熱銷</a>
+      </div>
+    </div>
+
+    <!-- 軍綠色寬鬆休閒褲 -->
+    <div class="card">
+      <div class="img" style="background-image:url('images/B.jpg');"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-weight:700">寬鬆休閒褲（軍綠色）</div>
+          <div style="color:var(--muted);font-size:13px">尺寸：M/L/XL</div>
+        </div>
+        <div class="price">NT$288</div>
+      </div>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <a class="btn-sm" href="#">加入購物車</a>
+        <a class="tag">推薦</a>
+      </div>
+    </div>
+
+    <!-- 白色寬鬆休閒褲 -->
+    <div class="card">
+      <div class="img" style="background-image:url('images/C.jpg');"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-weight:700">寬鬆休閒褲（白色）</div>
+          <div style="color:var(--muted);font-size:13px">尺寸：M/L/XL</div>
+        </div>
+        <div class="price">NT$288</div>
+      </div>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <a class="btn-sm" href="#">加入購物車</a>
+        <a class="tag">新品</a>
+      </div>
+    </div>
+
+    <!-- 卡其色寬鬆休閒褲 -->
+    <div class="card">
+      <div class="img" style="background-image:url('images/D.jpg');"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-weight:700">寬鬆休閒褲（卡其色）</div>
+          <div style="color:var(--muted);font-size:13px">尺寸：M/L/XL</div>
+        </div>
+        <div class="price">NT$288</div>
+      </div>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <a class="btn-sm" href="#">加入購物車</a>
+        <a class="tag">推薦</a>
+      </div>
+    </div>
+
+    <!-- 多色選擇寬鬆休閒褲 -->
+    <div class="card">
+      <div class="img" style="background-image:url('images/E.jpg');"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-weight:700">多色選擇寬鬆休閒褲</div>
+          <div style="color:var(--muted);font-size:13px">18色可選</div>
+        </div>
+        <div class="price">NT$288</div>
+      </div>
+      <div style="margin-top:12px;display:flex;gap:8px">
+        <a class="btn-sm" href="#">加入購物車</a>
+        <a class="tag">熱銷</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="about">
+      <h2>關於 clothesTina.store</h2>
+      <div class="grid-2" style="align-items:center;margin-top:12px">
+        <div>
+          <p style="color:var(--muted)">clothesTina 是一個由設計師 Tina 與年輕父母團隊創立的小品牌。我們專注於「媽媽友善」的服裝設計：兼顧美感與機能，並透過嚴選面料與小量生產，確保品質與舒適度。</p>
+          <ul style="color:var(--muted)">
+            <li>安心面料檢驗</li>
+            <li>無鋼圈/柔軟剪裁選項</li>
+            <li>支持退換貨 14 天內免費</li>
+          </ul>
+        </div>
+        <div>
+          <img src="https://source.unsplash.com/collection/190727/600x400" alt="about" style="width:100%;border-radius:10px;object-fit:cover"/>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <h2>聯絡我們</h2>
+      <p style="color:var(--muted)">客服信箱：support@clothestina.store</p>
+      <form onsubmit="contactSubmit(event)" style="margin-top:12px;display:grid;gap:8px;max-width:520px">
+        <input name="name" placeholder="姓名" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee" />
+        <input name="email" type="email" placeholder="電子郵件" required style="padding:10px;border-radius:8px;border:1px solid #e6e9ee" />
+        <textarea name="message" placeholder="想說的話" rows="4" style="padding:10px;border-radius:8px;border:1px solid #e6e9ee"></textarea>
+        <button class="cta" type="submit" style="width:140px">送出</button>
+      </form>
+    </section>
+  </main>
+
+  <div id="cart" class="modal" role="dialog" aria-hidden="true">
+    <div style="font-weight:700;margin-bottom:8px">購物車</div>
+    <div id="cartItems" style="max-height:220px;overflow:auto;margin-bottom:8px;color:var(--muted)">目前沒有商品</div>
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div id="cartTotal">總計：NT$0</div>
+      <a class="btn-sm" href="#" onclick="checkout();return false;">結帳</a>
+    </div>
+  </div>
+
+  <footer class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>© {new Date().getFullYear()} clothesTina.store • 媽媽的日常好衣選</div>
+      <div style="color:var(--muted)">配送 / 退貨 / 隱私權政策</div>
+    </div>
+  </footer>
+
+  <script>
+    // simple cart logic (for demo only)
+    const cart = [];
+    function addToCart(name, price){
+      cart.push({name, price});
+      renderCart();
+      const el = document.getElementById('cart');
+      el.classList.add('show');
+      setTimeout(()=>el.classList.remove('show'), 4000);
+    }
+    function renderCart(){
+      const items = cart.map((c,i)=>`<div style=\"display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f3f4f6\">${c.name}<span>NT$${c.price}</span></div>`).join('');
+      document.getElementById('cartItems').innerHTML = items || '目前沒有商品';
+      const sum = cart.reduce((s,it)=>s+it.price,0);
+      document.getElementById('cartTotal').textContent = `總計：NT$${sum}`;
+    }
+    function checkout(){
+      alert('示範結帳：總計 ' + cart.reduce((s,it)=>s+it.price,0) + ' 元。\n實際商店請串接支付系統。');
+    }
+    function contactSubmit(e){
+      e.preventDefault();
+      alert('已送出訊息，感謝您！');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
